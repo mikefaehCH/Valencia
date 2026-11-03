@@ -90,6 +90,13 @@
     transition: background 0.15s;
   }
   .map-link:hover { background: #faece7; }
+  /* Accessibility: sufficiently large touch targets and visible keyboard focus */
+  .map-link { min-height: 44px; padding: 10px 14px; }
+  .map-link:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .card, .map-link { transition: none; }
+    .card:hover { transform: none; }
+  }
 </style>
 </head>
 <body>
